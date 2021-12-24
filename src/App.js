@@ -1,10 +1,25 @@
-import { useState } from "react";
+import { useState,useEffect} from "react";
 import AddTodo from "./components/AddTodo/addTodo";
 import './App.css';
 import TodoList from "./components/List/todoList";
+
+const getLocalStorage=()=>{
+  let todosList=localStorage.getItem('todosList');
+  if(todosList){
+    return(todosList =JSON.parse(localStorage.getItem('todosList')));
+  }else{
+    return [];
+  }
+}
+
 function App() {
   const [todo,setTodo]=useState('');
-  const [todos,setTodos]=useState([]);
+  const [todos,setTodos]=useState(getLocalStorage());
+
+  useEffect(()=>{
+        localStorage.setItem('todosList',JSON.stringify(todos))
+  },[todos]);
+
   const getTodo=({target})=>{
        setTodo(target.value);
        console.log(todo);

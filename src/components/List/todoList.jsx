@@ -3,6 +3,7 @@ const TodoList = ({todos,handleTaskCompleted,deleteTask}) => {
     const tasks=todos.map((todo)=>{
         return <li key={todo.id}>
             <div style={{display:'flex'}}>
+                {todo.isComplete ? "✔️":""}
                 <p className={todo.isComplete ? "taskComplete":"taskIncomplete"}>
                 {todo.todo}
                 </p>
