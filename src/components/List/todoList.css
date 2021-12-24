@@ -1,0 +1,56 @@
+.tasks{
+    margin: auto;
+    border-radius: 2%;
+    width: 60vw;
+    margin-top: 5vh;
+}
+
+.tasks ul{
+    list-style: none;
+    width: 90%;
+}
+
+.tasks ul li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bolder;
+    transition: .4s;
+    background-color: rgb(171 242 216);
+    margin-top: 20px;
+    border-radius: 20px;
+    padding:0 20px 0 20px;
+}
+
+.completed{
+   padding-top:30px;
+   color: rgb(5, 160, 5);
+}
+
+
+.taskComplete{
+    text-decoration: line-through;
+    cursor: pointer;
+    color:rgb(241, 57, 103);
+}
+
+.taskIncomplete{
+    cursor: pointer;
+    color: rgb(89, 14, 226);
+}
+
+.editbtn{
+    color: blue;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.deletebtn{
+    color:red;
+    cursor: pointer;
+}
+
+.completebtn{
+    cursor: pointer;
+    color: lightgreen;
+}
