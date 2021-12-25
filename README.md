@@ -10,3 +10,5 @@
 </img>
 - Marking completed tasks:
 <img src="UI imges\marked as completd.jpg"></img>
+- Editing UI design:
+<img src="UI imges\Editing UI.jpg"></img>
