@@ -17,7 +17,7 @@ function App() {
   const [todo,setTodo]=useState('');
   const [todos,setTodos]=useState(getLocalStorage());
   const [taskToUpdate,setTaskToUpdate]=useState({});
-  const [showPopup,setPopUp]=useState(false);
+  const [showUpdateField,setUpdateField]=useState(false);
 
   useEffect(()=>{
         localStorage.setItem('todosList',JSON.stringify(todos))
@@ -68,21 +68,28 @@ function App() {
     })
     setTodos(newTodos)
   }
+  const deleteCompletedTasks=()=>{
+        const updatedTodos=todos.filter(todo=>todo.isComplete === false)
+        setTodos(updatedTodos);
+  } 
   return (
     <div className="App">
-      <span>Add Your Todo ✍️</span>
+      <span>Add Your Todo's ✍️</span>
     <AddTodo todo={todo} getTodo={getTodo} addTodos={addTodos}/>
-    <TodoList todos={todos} 
+    {showUpdateField ? <UpdateTask
+    taskToUpdate={taskToUpdate}
+    updateTask={taskToBeUpdated}
+    removeUpdateField={()=>setUpdateField(!showUpdateField)}
+    /> :<TodoList todos={todos} 
     handleTaskCompleted={handleTaskCompleted} 
     deleteTask={deleteTask}
     taskToUpdate={task=>setTaskToUpdate(task)}
-    showPopUp={()=>setPopUp(!showPopup)}
-    />
-    {showPopup && <UpdateTask
-    taskToUpdate={taskToUpdate}
-    updateTask={taskToBeUpdated}
-    removePopUp={()=>setPopUp(!showPopup)}
+    showUpdateField={()=>setUpdateField(!showUpdateField)}
     />}
+    {todos.length > 0 ?<button className="clear-task"
+    onClick={deleteCompletedTasks}>
+           Clear Completed 
+    </button>: ''}
     </div>
   );
 }

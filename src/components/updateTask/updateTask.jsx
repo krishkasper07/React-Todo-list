@@ -2,31 +2,29 @@ import './updateTask.css'
 import React from 'react'
 import { useState } from 'react';
 
-export const UpdateTask=({taskToUpdate,removePopUp,updateTask,})=> {
+export const UpdateTask=({taskToUpdate,removeUpdateField,updateTask,})=> {
     const [task,setTask]=useState(taskToUpdate.todo);
     return (
-        <div className='popup'>
-            <div className='popup-content'>
+            <div className='update-div'>
                 <input type="text" 
                 placeholder="update your Task.."
                 value={task}
                 onChange={e=>setTask(e.target.value)}
                 ></input>
             <button
-            className="update"
+            className="updatebtn"
             onClick={()=>{
                 updateTask(task)
-                removePopUp()
+                removeUpdateField()
             }
             }>
                 Update
             </button>
-            <button className="cancel"
-            onClick={()=>removePopUp()}>
+            <button className="cancelbtn"
+            onClick={()=>removeUpdateField()}>
                 Cancel
             </button>
             </div>
-        </div>
     )
 }
 

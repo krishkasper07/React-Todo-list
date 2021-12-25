@@ -1,25 +1,49 @@
 .tasks{
-    margin: auto;
-    border-radius: 2%;
-    width: 60vw;
-    margin-top: 5vh;
+    display: flex;
+    flex-direction:row;
+    position: relative;
+    margin-top: 4px;
 }
 
 .tasks ul{
     list-style: none;
-    width: 90%;
 }
 
 .tasks ul li{
     display: flex;
     justify-content: space-between;
-    font-size: 30px;
-    font-weight: bolder;
-    transition: .4s;
-    background-color: rgb(46, 21, 94);
-    margin-top: 20px;
-    border-radius: 20px;
-    padding:0 20px 0 20px;
+    align-items: center;
+    background: linear-gradient(
+    90deg,
+    rgb(245, 105, 6) 0%,
+    rgb(248, 193, 171) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width:30vw;
+  margin: 4px auto;
+}
+.tasks ul li:nth-child(4n + 1){
+    background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.tasks ul li:nth-child(4n + 2){
+    background: linear-gradient(
+    90deg,
+    rgb(4, 197, 245) 0%,
+    rgb(212, 155, 245) 100%
+  );
+}
+.tasks ul li:nth-child(4n + 3){
+  background: linear-gradient(
+  90deg,
+  rgb(245, 4, 165) 0%,
+  rgb(212, 155, 245) 100%
+);
 }
 
 .completed{
@@ -31,33 +55,60 @@
 .taskComplete{
     text-decoration: line-through;
     cursor: pointer;
-    color:rgb(241, 57, 103);
+    color:rgb(8, 209, 34);
+    font-weight: bolder;
+    font-size: larger;
 }
 
 .taskIncomplete{
     cursor: pointer;
-    color: rgb(89, 14, 226);
+    color:#fff;
+    font-size: larger;
 }
 
 .editbtn{
+    padding: 10px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
     cursor: pointer;
-    background-color: blue;
-    border-radius: 20%;
-    padding: 5px;
-    margin-left: 5px;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(32, 2, 87) 0%,
+      rgb(130, 95, 228) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+    margin-left: 4px;
 }
 
 .deletebtn{
+    padding: 10px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
     cursor: pointer;
-    background-color: red;
-    border-radius: 20%;
-    padding: 5px;
-    margin-left: 5px;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(250, 57, 57) 0%,
+      rgb(243, 23, 159) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+    margin-left: 4px;
 }
 
 .completebtn{
+    padding: 10px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
     cursor: pointer;
-    background-color: lightgreen;
-    border-radius: 20%;
-    padding: 5px;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(3, 117, 58) 0%,
+      rgb(49, 231, 73) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
 }

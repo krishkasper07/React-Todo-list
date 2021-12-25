@@ -4,21 +4,28 @@
     align-items: center;
 }
 .addtodo input[type="text"]{
-    width: 70vh;
-    height: 2vh;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
     outline: none;
-    border: 2px solid black;
+    width: 320px;
+    background: transparent;
+    color: #fff;
+}
+.addtodo input::placeholder{
+    color:white
 }
 .addtodo button{
-    cursor: pointer;
-    padding: 5px;
-    font-weight: bold;
-    background-color: rgb(146, 240, 146);
-    border-radius: 10px;
-    outline: none;
-    border: 2px solid black;
-    margin-left: 5px;
-    
+    padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
 }

@@ -1,12 +1,42 @@
+body {
+    background: linear-gradient(
+      90deg,
+      rgb(206, 18, 223) 0%,
+      rgb(152, 160, 238) 100%
+    );
+  }
 .App{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  background: #050a55;
+  text-align: center;
+  margin: 100px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
 }
 .App span{
-    margin: 20px;
-    font-size: large;
-    font-style:italic;
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.clear-task{
+  padding: 10px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgb(215, 248, 25) 0%,
+      rgb(142, 173, 4) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+    width: 150px;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
 }

@@ -1,5 +1,5 @@
 import './todoList.css';
-const TodoList = ({todos,handleTaskCompleted,deleteTask,showPopUp,taskToUpdate}) => {
+const TodoList = ({todos,handleTaskCompleted,deleteTask,showUpdateField,taskToUpdate}) => {
     const tasks=todos.map((todo)=>{
         return <li key={todo.id}>
             <div style={{display:'flex'}}>
@@ -11,13 +11,13 @@ const TodoList = ({todos,handleTaskCompleted,deleteTask,showPopUp,taskToUpdate})
             <div>
                 <button className='completebtn'
                 onClick={()=>handleTaskCompleted(todo.id)}>
-                     completed
+                     Completed
                 </button>
                 <button className='editbtn'onClick={()=>{
                     taskToUpdate(todo)
-                    showPopUp()
+                    showUpdateField()
                 }}>
-                    EDIT
+                    Edit
                 </button>
                 <button
                 className='deletebtn' 
