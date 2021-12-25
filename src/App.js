@@ -88,7 +88,7 @@ function App() {
     />}
     {todos.length > 0 ?<button className="clear-task"
     onClick={deleteCompletedTasks}>
-           Clear Completed 
+           🗑️Clear Completed 
     </button>: ''}
     </div>
   );

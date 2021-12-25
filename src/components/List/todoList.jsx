@@ -11,18 +11,18 @@ const TodoList = ({todos,handleTaskCompleted,deleteTask,showUpdateField,taskToUp
             <div>
                 <button className='completebtn'
                 onClick={()=>handleTaskCompleted(todo.id)}>
-                     Completed
+                     ✔️Complete
                 </button>
                 <button className='editbtn'onClick={()=>{
                     taskToUpdate(todo)
                     showUpdateField()
                 }}>
-                    Edit
+                   ✍🏻 Edit
                 </button>
                 <button
                 className='deletebtn' 
                 onClick={()=>deleteTask(todo.id)}>
-                     Delete
+                    ❌ Delete
                 </button>
             </div>
         </li>
